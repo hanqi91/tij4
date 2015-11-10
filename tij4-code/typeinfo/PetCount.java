@@ -1,5 +1,6 @@
 //: typeinfo/PetCount.java
 // Using instanceof
+package typeinfo;
 import typeinfo.pets.*;
 import java.util.*;
 import static net.mindview.util.Print.*;
@@ -7,7 +8,7 @@ import static net.mindview.util.Print.*;
 public class PetCount {
     static class PetCounter extends HashMap<String, Integer> {
         public void count(String type) {
-        Integer quantity = get(type);
+          Integer quantity = get(type);
             if (quantity == null)
                 put(type, 1);
             else
@@ -25,15 +26,17 @@ public class PetCount {
             if (pet instanceof Dog)
                 counter.count("Dog");
             if (pet instanceof Mutt)
-                counter.count("MUtt");
+                counter.count("Mutt");
             if (pet instanceof Pug)
                 counter.count("Pug");
             if (pet instanceof Cat)
                 counter.count("Cat");
-            if (pet instanceof Manx)
+            if (pet instanceof EgyptianMau)
                 counter.count("EgyptianMau");
             if (pet instanceof Manx)
                 counter.count("Manx");
+            if (pet instanceof Cymric)
+                counter.count("Cymric");
             if (pet instanceof Rodent)
                 counter.count("Rodent");
             if (pet instanceof Rat)
